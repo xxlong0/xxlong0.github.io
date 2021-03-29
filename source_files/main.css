@@ -76,6 +76,7 @@ td.description-column {
     width: 780px;
     height: 120px;
     text-align: left;
+    padding-left: 20px ;
 }
 
 td.general-item-left {
