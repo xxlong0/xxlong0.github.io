@@ -91,6 +91,14 @@ td.description-column {
     padding-left: 20px;
 }
 
+
+td.description-column2 {
+    width: 780px;
+    height: 150px;
+    text-align: left;
+    padding-left: 20px;
+}
+
 td.general-item-left {
     font-style: italic;
     font-size:50px;
