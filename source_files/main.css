@@ -68,7 +68,7 @@ img.publication-image {
 
 img.publication-image2 {
     width: 240px;
-    height: 150px;
+    height: 160px;
     align: center;
 }
 
@@ -80,13 +80,13 @@ td.image-column {
 
 td.image-column2 {
     width: 220px;
-    height: 150px;
+    height: 120px;
 	padding-left: 10px;
 }
 
 td.description-column {
     width: 780px;
-    height: 120px;
+    height: 150px;
     text-align: left;
     padding-left: 20px;
 }
