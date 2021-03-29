@@ -68,8 +68,8 @@ img.publication-image {
 
 td.image-column {
     width: 220px;
-    height: 100px;
-	padding-left: 30px;
+    height: 120px;
+	padding-left: 0px;
 }
 
 td.description-column {
