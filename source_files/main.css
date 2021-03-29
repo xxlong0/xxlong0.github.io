@@ -66,6 +66,12 @@ img.publication-image {
     align: center;
 }
 
+img.publication-image2 {
+    width: 240px;
+    height: 150px;
+    align: center;
+}
+
 td.image-column {
     width: 220px;
     height: 120px;
