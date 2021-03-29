@@ -61,7 +61,7 @@ div.content {
 }
 
 img.publication-image {
-    width: 160px;
+    width: 240px;
     height: 120px;
     align: center;
 }
@@ -73,7 +73,7 @@ td.image-column {
 }
 
 td.description-column {
-    width: 780;
+    width: 780px;
     height: 120px;
     text-align: left;
 }
@@ -85,7 +85,7 @@ td.general-item-left {
 }
 
 td.general-item-right {
-    width: 780;
+    width: 780px;
     text-align: left;
 }
 
