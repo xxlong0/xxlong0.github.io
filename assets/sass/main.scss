@@ -905,7 +905,7 @@ $size-header-pad: 4em;
 				border-right: 0;
 
 				&:nth-child(2n + 1) {
-					background-color: _palette(border-bg);
+					background-color: _palette(border-fg);
 				}
 			}
 		}
