@@ -124,7 +124,12 @@
 	display: block;
 	height: auto;
 	object-fit: cover;
+	object-position: center top;
 	width: 100%;
+}
+
+.group-photo-wenhui {
+	object-position: center 54%;
 }
 
 .group-photo-placeholder {
