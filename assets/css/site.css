@@ -27,6 +27,18 @@
 	font-weight: 600;
 }
 
+#header .image.avatar {
+	aspect-ratio: 1;
+	overflow: hidden;
+}
+
+#header .image.avatar img {
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	width: 100%;
+}
+
 .research-figure {
 	text-align: center;
 }
@@ -38,6 +50,62 @@
 
 .opening-highlight {
 	color: rgb(222, 95, 95);
+}
+
+.opening-panel {
+	background: #fff7f7;
+	border: solid 2px #e98585;
+	border-radius: 8px;
+	box-shadow: 0 0.75em 2em rgba(143, 64, 64, 0.08);
+	color: #b83f3f;
+	margin: 0 0 2.4em 0;
+	padding: 1.5em 1.8em 1.6em;
+}
+
+.opening-panel h3,
+.opening-panel h4,
+.opening-panel p,
+.opening-panel li {
+	color: #b83f3f;
+}
+
+.opening-panel-title {
+	font-size: 1.25em;
+	font-weight: 700;
+	line-height: 1.35;
+	margin: 0 0 0.75em 0;
+	text-align: center;
+}
+
+.opening-panel-subtitle {
+	font-size: 1.05em;
+	font-weight: 700;
+	line-height: 1.35;
+	margin: 0 0 1.35em 0;
+	text-align: center;
+}
+
+.opening-panel h4 {
+	font-size: 1em;
+	font-weight: 700;
+	margin: 1.2em 0 0.45em 0;
+}
+
+.opening-panel ul {
+	margin: 0 0 0.9em 1.1em;
+	padding-left: 1em;
+}
+
+.opening-panel li {
+	font-size: 0.88em;
+	font-weight: 600;
+	line-height: 1.55;
+	padding-left: 0.25em;
+}
+
+.opening-panel a {
+	color: #a93434;
+	font-weight: 700;
 }
 
 .compact-list {
