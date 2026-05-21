@@ -34,6 +34,76 @@
 		}
 	}
 
+	function setupPublicationVideos() {
+		var videos = Array.prototype.slice.call(document.querySelectorAll('#two .work-item video'));
+
+		if (!videos.length) {
+			return;
+		}
+
+		function loadVideo(video) {
+			var src = video.getAttribute('src');
+
+			if (!src || src === 'images/publications/') {
+				return;
+			}
+
+			video.muted = true;
+			video.loop = true;
+			video.preload = 'metadata';
+			video.setAttribute('playsinline', '');
+			video.setAttribute('webkit-playsinline', '');
+
+			if (video.dataset.publicationVideoLoaded !== 'true') {
+				video.dataset.publicationVideoLoaded = 'true';
+				video.load();
+			}
+
+			var playRequest = video.play();
+
+			if (playRequest && playRequest.catch) {
+				playRequest.catch(function() {
+					// Some browsers block autoplay from local files; metadata loading still shows the preview frame.
+				});
+			}
+		}
+
+		function pauseVideo(video) {
+			if (!video.paused) {
+				video.pause();
+			}
+		}
+
+		if ('IntersectionObserver' in window) {
+			var observer = new IntersectionObserver(function(entries) {
+				for (var i = 0; i < entries.length; i++) {
+					if (entries[i].isIntersecting) {
+						loadVideo(entries[i].target);
+					} else {
+						pauseVideo(entries[i].target);
+					}
+				}
+			}, {
+				rootMargin: '600px 0px',
+				threshold: 0.01
+			});
+
+			for (var j = 0; j < videos.length; j++) {
+				observer.observe(videos[j]);
+			}
+		} else {
+			for (var k = 0; k < videos.length; k++) {
+				loadVideo(videos[k]);
+			}
+		}
+
+		window.addEventListener('load', function() {
+			for (var i = 0; i < Math.min(videos.length, 8); i++) {
+				loadVideo(videos[i]);
+			}
+		});
+	}
+
 	function initHighlightCarousel(root) {
 		var viewport = root.querySelector('.highlight-carousel-viewport');
 		var track = root.querySelector('.highlight-track');
@@ -202,5 +272,6 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		setupNewsToggle();
 		setupHighlightProjects();
+		setupPublicationVideos();
 	});
 })();
